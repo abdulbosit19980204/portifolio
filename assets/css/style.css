@@ -5,6 +5,13 @@
 * License: https://bootstrapmade.com/license/
 */
 
+/*-------------------------------------------------------------
+additional
+--------------------------------------------------------------*/
+.shadow_ico{
+  box-shadow: 0px 3px 6px rgba(56, 197, 229, 0.6);
+}
+
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -79,6 +86,7 @@ h6 {
   transition: all 0.5s;
   padding: 0 15px;
   background: #040b14;
+  /* background:#01140e; */
   overflow-y: auto;
 }
 
@@ -86,7 +94,11 @@ h6 {
   margin: 15px auto;
   display: block;
   width: 120px;
-  border: 8px solid #2c2f3f;
+  /* border: 8px solid #2c2f3f; */
+  /* border: 2px solid #ddfc63; */
+  border: 2.5px solid #f5f5f5;
+  /* box-shadow: 0px 8px 12px rgba(209, 230, 22, 0.2); */
+  box-shadow: 0px 0px 50px rgba(56, 197, 229, 0.4);
 }
 
 #header .profile h1 {

@@ -11,6 +11,9 @@ additional
 .shadow_ico{
   box-shadow: 0px 3px 6px rgba(56, 197, 229, 0.6);
 }
+.checked {
+  color: orange;
+}
 
 /*--------------------------------------------------------------
 # General

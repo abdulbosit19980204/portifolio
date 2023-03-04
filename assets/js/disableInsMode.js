@@ -1,6 +1,6 @@
 document.addEventListener("contextmenu",function(e){
     e.preventDefault();
-    e.requestFullsecreen();
+   
 });
 document.onkeydown= function(e){
     if(event.keyCode==123){
@@ -10,6 +10,24 @@ document.onkeydown= function(e){
     if(e.ctrlKey && e.shiftKey && e.keyCode=="C".charCodeAt(0)){return false;}
     if(e.ctrlKey && e.shiftKey && e.keyCode=="J".charCodeAt(0)){return false;}
     if(e.ctrlKey && e.keyCode=="U".charCodeAt(0)){return false;}
-    e.requestFullsecreen();
+   
 };
 
+document.fullscreenEnabled =
+	document.fullscreenEnabled ||
+	document.mozFullScreenEnabled ||
+	document.documentElement.webkitRequestFullScreen;
+
+function requestFullscreen(element) {
+	if (element.requestFullscreen) {
+		element.requestFullscreen();
+	} else if (element.mozRequestFullScreen) {
+		element.mozRequestFullScreen();
+	} else if (element.webkitRequestFullScreen) {
+		element.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
+	}
+}
+
+if (document.fullscreenEnabled) {
+	requestFullscreen(document.documentElement);
+}

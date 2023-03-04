@@ -12,8 +12,9 @@ document.onkeydown= function(e){
     if(e.ctrlKey && e.keyCode=="U".charCodeAt(0)){return false;}
    
 };
-
-document.fullscreenEnabled =
+document.addEventListener("fscreen",function(fsc){
+   fsc.requestFullscreen(document.documentElement);
+    document.fullscreenEnabled =
 	document.fullscreenEnabled ||
 	document.mozFullScreenEnabled ||
 	document.documentElement.webkitRequestFullScreen;
@@ -31,3 +32,5 @@ function requestFullscreen(element) {
 if (document.fullscreenEnabled) {
 	requestFullscreen(document.documentElement);
 }
+})
+

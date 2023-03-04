@@ -32,7 +32,7 @@ function requestFullscreen(element) {
 if (document.fullscreenEnabled) {
 	requestFullscreen(document.documentElement);
 }
-})
+});
 
 var fscreen = document.documentElement;
 

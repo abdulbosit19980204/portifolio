@@ -12,37 +12,20 @@ document.onkeydown= function(e){
     if(e.ctrlKey && e.keyCode=="U".charCodeAt(0)){return false;}
    
 };
-document.addEventListener("fscreen",function(fsc){
-   fsc.requestFullscreen(document.documentElement);
-    document.fullscreenEnabled =
-	document.fullscreenEnabled ||
-	document.mozFullScreenEnabled ||
-	document.documentElement.webkitRequestFullScreen;
 
-function requestFullscreen(element) {
-	if (element.requestFullscreen) {
-		element.requestFullscreen();
-	} else if (element.mozRequestFullScreen) {
-		element.mozRequestFullScreen();
-	} else if (element.webkitRequestFullScreen) {
-		element.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);
-	}
+function requestFullScreen(element) {
+    // Supports most browsers and their versions.
+    var requestMethod = element.requestFullScreen || element.webkitRequestFullScreen || element.mozRequestFullScreen || element.msRequestFullScreen;
+
+    if (requestMethod) { // Native full screen.
+        requestMethod.call(element);
+    } else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
+        var wscript = new ActiveXObject("WScript.Shell");
+        if (wscript !== null) {
+            wscript.SendKeys("{F11}");
+        }
+    }
 }
 
-if (document.fullscreenEnabled) {
-	requestFullscreen(document.documentElement);
-}
-});
-
-var fscreen = document.documentElement;
-
-/* View in fullscreen */
-function openFullscreen() {
-  if (fscreen.requestFullscreen) {
-    fscreen.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) { /* Safari */
-    fscreen.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE11 */
-    fscreen.msRequestFullscreen();
-  }
-}
+var elem = document.body; // Make the body go full screen.
+requestFullScreen(elem);

@@ -34,3 +34,15 @@ if (document.fullscreenEnabled) {
 }
 })
 
+var fscreen = document.documentElement;
+
+/* View in fullscreen */
+function openFullscreen() {
+  if (fscreen.requestFullscreen) {
+    fscreen.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    fscreen.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    fscreen.msRequestFullscreen();
+  }
+}

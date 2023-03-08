@@ -810,7 +810,7 @@
             </form> -->
             <div class="row col-md-12">
                 <!-- Calendly inline widget begin -->
-              <div class="calendly-inline-widget" data-url="https://calendly.com/abdulbosit" style="min-width:320px;height:630px;"></div>
+              <div class="calendly-inline-widget" data-url="https://calendly.com/abdulbosit" style="min-width:320px;height:730px;"></div>
               <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
               <!-- Calendly inline widget end -->
             <!-- <img src="assets/img/thankyou.avif" alt=""  class="img-fluid rounded mx-auto d-block"> -->
@@ -820,6 +820,23 @@
         </div>
 
       </div>
+
+      <!-- Calendly badge widget begin -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            Calendly.initBadgeWidget({
+                url: 'https://calendly.com/abdulbosit',
+                text: 'Schedule time with me',
+                color: '#0069ff',
+                textColor: '#ffffff',
+                branding: true
+            });
+        }
+    </script>
+    <!-- Calendly badge widget end -->
+
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->

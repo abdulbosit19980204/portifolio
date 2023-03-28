@@ -49,3 +49,12 @@ body:fullscreen {
   .sourse_ico:hover span{
     display: inline-block;
   }
+
+  .project_create_date{
+    color: #777777;
+    text-decoration: none;
+    margin-left: 80px;
+    font-size: medium;
+    padding-top: 30px;
+    padding-bottom: 0px;
+  }

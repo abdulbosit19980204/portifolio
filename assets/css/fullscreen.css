@@ -10,3 +10,42 @@ body:fullscreen {
   body:-moz-full-screen {
     overflow: scroll !important;
   }
+
+  .code_sourse{
+    display: flex; 
+    color: rgb(54, 117, 162);
+    /* font-weight: bold; */
+    font-size: 16px;
+    list-style-type: none; 
+    margin-left: 80px;
+    vertical-align: middle;
+    color: white;
+  }
+  .sourse_ico{
+    margin-left: 15px;
+    width: 60px;
+    height: 25px;
+    border: 1px solid #00ff8c;
+    border-radius: 20px;
+    text-align: center;
+    vertical-align: middle;
+    overflow:  hidden;
+   font-size: 18px;
+ color: white;
+ background-color: #00ff8c;
+  }
+  .sourse_ico i{
+    margin-left: 5px;
+  }
+  .sourse_ico span{
+    display: none;
+  }
+  .sourse_ico:hover{
+    background-color: #00ff8c;
+    width: 140px;
+    box-shadow: 0px 10px 20px 0px rgba(60, 64, 143, 0.2);
+    
+  }
+  .sourse_ico:hover span{
+    display: inline-block;
+  }

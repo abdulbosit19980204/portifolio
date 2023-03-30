@@ -68,3 +68,37 @@ body:fullscreen {
     /* margin-left: 50px;
     margin-top: 50px; */
   }
+
+  /* light mode */
+
+  /*Light mode*/
+
+.light-mode {
+    position: fixed;
+    /* visibility: hidden;   */
+    opacity: 1;
+    right: 15px;
+    top: 15px;
+    z-index: 1996;
+    background: #0a0b0b;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    transition: all 0.4s;
+}
+
+.light-mode i {
+    font-size: 28px;
+    color: #fff;
+    line-height: 0;
+}
+
+.light-mode:hover {
+    background: #0678e3;
+    color: #fff;
+}
+
+.light-mode.active {
+    visibility: visible;
+    opacity: 1;
+}
